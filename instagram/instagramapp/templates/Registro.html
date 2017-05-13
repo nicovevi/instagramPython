@@ -5,7 +5,7 @@
   <!--Cambiar idioma a esp-->
     <meta charset="utf-8">
   <!--Titulo pagina-->
-    <title>Sign In</title>
+    <title>Register</title>
   <!--relacion de un archivo css al actual para la edicion de la vista en el navegador-->
     <link rel="stylesheet" type="text/css" href="{% static css/style.css}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -15,10 +15,11 @@
 </head>
 
 <body>
+
   <center>
-  <div class="card" style="width: 40rem;">
+  <div class="card" style="width: 20rem;heigh: 30rem">
         <div class="card-block">
-          <div class="form-control" id="formulario" style="width: 20rem;">
+
                     Welcome to Insta
                     <!-- Cajas de informacion -->
                   <div class="form-group">
@@ -38,7 +39,7 @@
                 <button type="button" class="btn btn-info">Sign in</button><br>
                     <!-- si ya tiene una cuenta-->
                 ¿Do you have an account?
-                <a href="{% url 'login' %}">Log in</a><br>
+                <a href="{% url 'login' %}">Log in</a> <br>
       </div>
 
 
@@ -46,15 +47,15 @@
 
 </div>
 </center>
-
+<center>
 <!-- Imagenes-->
 <div id= "imagenes">
   <!--img src="Img/Download-app-store-logo.png" id="img1"  class="img-fluid" alt="Responsive image">-->
-  <img src="static/Img/get-it-on-google-play.png"  id="img2"  class="img-fluid" alt="Responsive image">
-  <img src="static/Img/Download-app-store-logo.png"  id="img2"  class="img-fluid" alt="Responsive image">
+  <img src="static/img/get-it-on-google-play.png"  id="img2"  class="img-fluid" style="width: 10rem;height:auto" >
+  <img src="static/img/Download-app-store-logo.png"  id="img2"  class="img-fluid" style="width: 10rem;height:auto">
 </div>
 </div>
-
+</center>
 
 </body>
 </html>
