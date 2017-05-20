@@ -1,13 +1,15 @@
-{% load static %}
+{% load static %}<br>
 <!DOCTYPE html>
 <html>
 <head>
+
+
   <!--Cambiar idioma a esp-->
     <meta charset="utf-8">
   <!--Titulo pagina-->
     <title>Register</title>
   <!--relacion de un archivo css al actual para la edicion de la vista en el navegador-->
-    <link rel="stylesheet" type="text/css" href="{% static css/style.css}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -19,20 +21,23 @@
   <center>
   <div class="card" style="width: 20rem;heigh: 30rem">
         <div class="card-block">
+          <from action = "{url 'crear_usuario'}" method="POST"></form>
 
-                    Welcome to Insta
+                    <font size="5" face="Pacifico">Welcome to Instagram</font><br>
+
+                  <font color="grey">Sign up to see photos and videos from your friends.</font>
                     <!-- Cajas de informacion -->
                   <div class="form-group">
-                      <input class="form-control" type="text" placeholder="e-mail">
+                      <input class="form-control" type="text" placeholder="e-mail" name="email">
                   </div>
                   <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Name">
+                      <input class="form-control" type="text" placeholder="Name" name="name">
                   </div>
                   <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Username">
+                      <input class="form-control" type="text" placeholder="Username" name="username">
                   </div>
                   <div class="form-group">
-                      <input class="form-control" type="password" placeholder="Password">
+                      <input class="form-control" type="password" placeholder="Password" name="password">
                   </div>
 
                     <!-- Boton de registro-->
@@ -45,7 +50,7 @@
 
 
 
-</div>
+</div><br>
 </center>
 <center>
 <!-- Imagenes-->
