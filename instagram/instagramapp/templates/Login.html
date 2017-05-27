@@ -1,4 +1,4 @@
-<br>
+{% load static %}<br>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,23 +19,23 @@
   <div class="card" style="width: 40rem;">
         <div class="card-block">
           <div class="form-control" id="formulario" style="width: 20rem;">
-                    Welcome to Instagram<br>
+                    <font size="5" face="Pacifico">Welcome to Instagram</font><br>
                     <!-- Cajas de informacion -->
 
 
                     <br>
                   <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Username">
+                      <input class="form-control" type="text" placeholder="Username" name ="username">
                   </div>
                   <div class="form-group">
-                      <input class="form-control" type="password" placeholder="Password">
+                      <input class="form-control" type="password" placeholder="Password" name = "password">
                   </div>
 
                     <!-- Boton de registro-->
-                <button type="button" class="btn btn-info">Sign in</button><br>
+                <button  class="btn btn-info">Sign in</button><br>
                     <!-- si ya tiene una cuenta-->
                 ¿Dont have an account?
-                <a href="{% url 'login' %}">Register</a> <br>
+                <a href="{% url 'index' %}">Register</a> <br>
       </div>
 
 
@@ -43,12 +43,12 @@
 
 </div><br>
 </center>
-<center>
+<center><br>
 <!-- Imagenes-->
 <div id= "imagenes">
   <!--img src="Img/Download-app-store-logo.png" id="img1"  class="img-fluid" alt="Responsive image">-->
-  <img src="static/img/get-it-on-google-play.png"  id="img2"  class="img-fluid" style="width: 10rem;height:auto" >
-  <img src="static/img/Download-app-store-logo.png"  id="img2"  class="img-fluid" style="width: 10rem;height:auto">
+  <img src="{% static 'img/get-it-on-google-play.png' %}"  id="img2"  class="img-fluid" style="width: 10rem;height:auto" >
+  <img src="{% static 'img/Download-app-store-logo.png' %}"  id="img2"  class="img-fluid" style="width: 10rem;height:auto">
 </div>
 </div>
 </center>
