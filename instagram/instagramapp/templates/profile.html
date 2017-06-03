@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,6 @@
   <!--Titulo pagina-->
     <title>Home</title>
   <!--relacion de un archivo css al actual para la edicion de la vista en el navegador-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
@@ -17,10 +15,11 @@
 </head>
 <center>
   <body><br>
+    <img src="{% static 'img/instagramtypography.png' %}"  class="img-fluid" style="width: 10rem;height:auto" >
     <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-secondary" style="width:300px;height:auto"  href="{% url 'home' %}">  <img src="{% static 'img/instagramlogo.jpg' %}"  id="img3"  class="img-fluid" style="width: 2rem;height:auto" >    </button>
-        <button type="button" class="btn btn-secondary" style="width:300px;height:auto">      <i class="material-icons" style="width: 3rem;height:auto">account_circle</i>       </button>
-        <button type="button" class="btn btn-secondary" style="width:300px;height:auto">      <i class="material-icons" style="width: 3rem;height:auto">public</i>      </button>
+        <button type="button" class="btn btn-secondary" style="width:300px;height:auto">      <i class="material-icons">account_circle</i>       </button>
+        <button type="button" class="btn btn-secondary" style="width:300px;height:auto">          Followed          </button>
         <button type="button" class="btn btn-secondary" style="width:300px;height:auto">    <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" >
             <button  class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -39,4 +38,4 @@
   </div>
 </div>
 </center>
-<a href="{% url 'logout' %}">Log Out</a> <br>
+<a href="{% url 'index' %}">Log Out</a> <br>
