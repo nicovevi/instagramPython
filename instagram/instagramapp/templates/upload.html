@@ -6,7 +6,7 @@
   <!--Cambiar idioma a esp-->
     <meta charset="utf-8">
   <!--Titulo pagina-->
-    <title>Profile</title>
+    <title>Upload</title>
   <!--relacion de un archivo css al actual para la edicion de la vista en el navegador-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -19,10 +19,14 @@
   <body><br>
     <div class="btn-group" role="group" aria-label="Basic example">
 
-        <a  class="btn btn-secondary" style="width:300px;height:auto"  href="{% url 'home' %}">  <img src="{% static 'img/instagramlogo.jpg' %}"  id="img3"  class="img-fluid" style="width: 2rem;height:auto" >    </a>
-        <a  class="btn btn-secondary" style="width:300px;height:auto" href="{% url 'profile' %}">      <i class="material-icons" style="width: 3rem;height:auto">account_circle</i>       </a>
-        <a  class="btn btn-secondary" style="width:300px;height:auto" href="...">      <i class="material-icons" style="width: 3rem;height:auto">public</i>      </button>
-        <a class="btn btn-secondary" style="width:300px;height:auto"  href="{% url 'upload' %}">  <img src="{% static 'img/Uploadicon.png' %}"   class="img-fluid" style="width: 2rem;height:auto" >  </a>
+      <a  class="btn btn-secondary" style="width:300px;height:auto"  href="{% url 'home' %}">  <img src="{% static 'img/instagramlogo.jpg' %}"  id="img3"  class="img-fluid" style="width: 2rem;height:auto" >    </a>
+      <a  class="btn btn-secondary" style="width:300px;height:auto" href="{% url 'profile' %}">      <i class="material-icons" style="width: 3rem;height:auto">account_circle</i>       </a>
+      <a  class="btn btn-secondary" style="width:300px;height:auto" href="...">      <i class="material-icons" style="width: 3rem;height:auto">public</i>      </button>
+      <a class="btn btn-secondary" style="width:300px;height:auto"  href="{% url 'upload' %}">  <img src="{% static 'img/Uploadicon.png' %}"   class="img-fluid" style="width: 2rem;height:auto" >  </a>
+
+        </form>
+        </button>
+
 
     </div>
   </body>
@@ -30,5 +34,9 @@
 <br>
 <center>
 
-</center>
-<a href="{% url 'index' %}">Log Out</a> <br>
+    <form action="{% url 'upload' %}">
+     <input class="btn btn-secondary" type="file" name="img">
+      <input class="btn btn-secondary" type="submit">
+    </form>
+
+  </div>
